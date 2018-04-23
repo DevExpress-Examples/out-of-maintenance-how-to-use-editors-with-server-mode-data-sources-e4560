@@ -1,0 +1,28 @@
+﻿<Window 
+    x:Class="DXGridSample.MainWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+	xmlns:local="clr-namespace:DXGridSample"
+    Name="win" 
+    Title="MainWindow" 
+    Height="350" 
+    Width="525">
+	<Grid>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+			<local:MyLookUpEdit x:Name="edit" IncrementalFiltering="True">
+				<local:MyLookUpEdit.GridControl>
+					<dxg:GridControl x:Name="PART_GridControl" Height="250" AutoPopulateColumns="True" ShowBorder="False">
+						<dxg:GridControl.View>
+							<dxg:TableView SearchColumns="Name" ShowSearchPanelMode="Never"/>
+						</dxg:GridControl.View>
+					</dxg:GridControl>
+				</local:MyLookUpEdit.GridControl>
+			</local:MyLookUpEdit>
+			<TextBox/>
+		</StackPanel>
+	</Grid>
+</Window>
