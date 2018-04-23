@@ -1,0 +1,28 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="SCModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="SCIssuesDemo">
+        <Key>
+          <PropertyRef Name="Oid" />
+        </Key>
+        <Property Name="Oid" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ID" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="Subject" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="ModifiedOn" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="CreatedOn" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="ProductName" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="TechnologyName" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+        <Property Name="Urgent" Type="Edm.Boolean" Nullable="true" />
+        <Property Name="Status" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="WcfLinqSC" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="SCEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <FunctionImport Name="GetSCIssuesDemoExtendedData" ReturnType="Edm.String" m:HttpMethod="GET">
+          <Parameter Name="extendedDataInfo" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <EntitySet Name="SCIssuesDemo" EntityType="SCModel.SCIssuesDemo" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
