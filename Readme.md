@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/LookUpEditWithServerMode/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/LookUpEditWithServerMode/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/LookUpEditWithServerMode/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/LookUpEditWithServerMode/MainWindow.xaml.vb))
+* [MyLookUpEdit.cs](./CS/LookUpEditWithServerMode/MyLookUpEdit.cs) (VB: [MyLookUpEdit.vb](./VB/LookUpEditWithServerMode/MyLookUpEdit.vb))
+<!-- default file list end -->
 # How to use editors with Server Mode data sources
 
 
